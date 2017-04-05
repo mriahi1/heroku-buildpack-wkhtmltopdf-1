@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "wkhtmltopdf"
-exit 0
+if [ -f $1/.vendor_urls ]; then
+    echo "VendorBinaries"
+    exit 0
+else
+    exit 1
+fi
